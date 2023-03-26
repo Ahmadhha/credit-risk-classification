@@ -4,40 +4,40 @@
 
 * Purpose of Analysis: To predict the risk of a loan based on financial information related to the loan and borrower.
 * Financial Information: 
-  ** Load: Size, interest rate.
-  ** Borrower: Income, dept, number of accounts, deragotary marks, total debt.
+  - Load: Size, interest rate.
+  - Borrower: Income, dept, number of accounts, deragotary marks, total debt.
 * Prediction: The risk of the loan defaulting. 
 * Training Data: Total data points: 77,536, Healthy Loans: 75,036, High Risk Loans: 2500
 * Stages of Machine Learning: 
-  ** Data Preparation: Read data, Separate Labels and Features, Split Training and Test data, Resample Training data using RandomOverSampler (second model only)
-  ** Machine Learning Model Preparation: Create instance of a logistic regression model, fit the training data to the model, predict the outcome using test data
-  ** Model Evaluation: Create confusion matrix and classification reports to evaluate model performance.
+  - Data Preparation: Read data, Separate Labels and Features, Split Training and Test data, Resample Training data using RandomOverSampler (second model only)
+  - Machine Learning Model Preparation: Create instance of a logistic regression model, fit the training data to the model, predict the outcome using test data
+  - Model Evaluation: Create confusion matrix and classification reports to evaluate model performance.
 * Logistic Regression: Supervised machine learning model used for classification tasks, where the goal is to predict a binary outcome Uses a logistic function to transform a linear combination of input variables into a probability of belonging to one of the two classes.
 * RandomOverSampler: A module from imblearn that increases the number of samples in the minority class by randomly replicating existing samples to balance class distribution.
 
 ## Results
 
-* Machine Learning Model 1:
-  * Accuracy: The classification model correctly predicted 94.4% of the samples, considering both the minority and majority class, taking into account the class imbalance of the dataset.
-  * Confusion matrix:
-- 18,679 out of 18,759 healthy loans or true negatives correctly predicted
-- 80 out of 18,759 false positives
-- 558 out of 625 high risk loans or true positives correctly predicted
-- 67 out of 625 false negatives
-  * Classification Report:
-- Precision: Majority of healthy loans predicted are correct, 87% of high risk loans predicted are correct.
-- Recall: Majority of actual healthy loans were correctly predicted, 89% of actual high risk loans were predicted as high risk.
+### Machine Learning Model 1:
+* Accuracy: The classification model correctly predicted 94.4% of the samples, considering both the minority and majority class, taking into account the class imbalance of the dataset.
+* Confusion matrix:
+   - 18,679 out of 18,759 healthy loans or true negatives correctly predicted
+   - 80 out of 18,759 false positives
+   - 558 out of 625 high risk loans or true positives correctly predicted
+   - 67 out of 625 false negatives
+* Classification Report:
+   - Precision: Majority of healthy loans predicted are correct, 87% of high risk loans predicted are correct.
+   - Recall: Majority of actual healthy loans were correctly predicted, 89% of actual high risk loans were predicted as high risk.
 
-* Machine Learning Model 1:
-  * Accuracy: The classification model correctly predicted 99.6% of the samples, considering both the minority and majority class, taking into account the class imbalance of the dataset.
-  * Confusion matrix:
-- 18,668 out of 18,759 healthy loans or true negatives correctly predicted
-- 91 out of 18,759 false positives
-- 623 out of 625 high risk loans or true positives correctly predicted
-- 2 out of 625 false negatives
-  * Classification Report:
-- Precision: Majority of healthy loans predicted are correct, 87% of high risk loans predicted are correct.
-- Recall: Majority of actual healthy loans were correctly predicted, Majority of actual high risk loans were predicted as high risk.
+### Machine Learning Model 2:
+* Accuracy: The classification model correctly predicted 99.6% of the samples, considering both the minority and majority class, taking into account the class imbalance of the dataset.
+* Confusion matrix:
+   - 18,668 out of 18,759 healthy loans or true negatives correctly predicted
+   - 91 out of 18,759 false positives
+   - 623 out of 625 high risk loans or true positives correctly predicted
+   - 2 out of 625 false negatives
+* Classification Report:
+   - Precision: Majority of healthy loans predicted are correct, 87% of high risk loans predicted are correct.
+   - Recall: Majority of actual healthy loans were correctly predicted, Majority of actual high risk loans were predicted as high risk.
 
 
 ## Summary
